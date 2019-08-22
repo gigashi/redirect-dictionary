@@ -1,0 +1,10 @@
+version: '3'
+services:
+  app:
+    image: alpine:3.6
+    working_dir: /work
+    volumes:
+      - "./out:/work"
+    ports:
+      - "8006:80"
+    command: ["./app"]
